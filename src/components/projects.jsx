@@ -40,14 +40,15 @@ function Projects() {
                 centeredSlides={true}
                 loop={true}
             >
+                
                 {projects.length === 0 ? (
                     <div>No projects available</div>
                 ) : (
                     projects.map((project, index) => (
                         <SwiperSlide key={index}>
-                            <div className="swiper-slide m-auto max-h-64 ">
-                                <img className='rounded-2xl max-h-52 max-w-52' src={project.image} alt={project.name} onError={(e) => {e.target.src = 'fallbackImage.jpg'}} />
-                                <h3>{project.name}</h3>
+                            <div className="swiper-slide m-auto bg-blue-400 rounded-2xl p-2">
+                                <img className='rounded-2xl max-h-52 max-w-52 m-auto' src={project.image} alt={project.name} onError={(e) => {e.target.src = 'fallbackImage.jpg'}} />
+                                <h3 className='text-2xl'>{project.name}</h3>
                                 <p>{project.description}</p>
                             </div>
                         </SwiperSlide>

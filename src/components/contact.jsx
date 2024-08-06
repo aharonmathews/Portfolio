@@ -3,7 +3,7 @@ import { useState } from 'react'
 function contact() {
 
   return (
-    <div>
+    <div className='mt-20'>
 
     </div>
   )
