@@ -4,7 +4,7 @@ function contact() {
 
   return (
     <div className='mt-20'>
-
+      
     </div>
   )
 }

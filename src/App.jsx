@@ -1,27 +1,32 @@
-import { useState } from 'react'
-import './index.css'
-import Navbar from './components/navbar'
-import About from './components/about'
-import Projects from './components/projects'
-import Contact from './components/contact'
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import './index.css';
+import Navbar from './components/navbar';
+import About from './components/about';
+import Projects from './components/projects';
+import Contact from './components/contact';
+import Footer from './components/footer';
+import Project1 from './components/projects/Project1';
+import Project2 from './components/projects/Project2';
+import Project3 from './components/projects/Project3';
+import Project4 from './components/projects/Project4';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className='relative'>
-      <div id="section1">
-        <Navbar />
-      </div>
+      <Navbar />
       <About />
-      <div id="section2">
-        <Projects />  
-      </div>
-      <div id="section3">
-        <Contact />
-      </div>
+      <Routes>
+        <Route path="/" element={<Projects />} />
+        <Route path="/project1" element={<Project1 />} />
+        <Route path="/project2" element={<Project2 />} />
+        <Route path="/project3" element={<Project3 />} />
+        <Route path="/project4" element={<Project4 />} />
+      </Routes>
+      <Contact />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
